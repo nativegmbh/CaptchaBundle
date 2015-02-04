@@ -27,7 +27,7 @@ class CaptchaController extends Controller
         $options = $this->container->getParameter('gregwar_captcha.config');
         $session = $this->get('session');
         $whitelistKey = $options['whitelist_key'];
-        $isOk = false;
+        $isOk = true;
 
         if ($session->has($whitelistKey)) {
             $keys = $session->get($whitelistKey);
